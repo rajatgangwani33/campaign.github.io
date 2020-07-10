@@ -25,10 +25,12 @@ export class CampaignRowComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
+  //Open Dialog
   openDialog($event) {
     this.openDialogEvent.emit($event)
   }
 
+  //To Calculate difference between dates
   calculateDiff(sentOn) {
 
     let todayDate = new Date();

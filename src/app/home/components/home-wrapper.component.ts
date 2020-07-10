@@ -41,11 +41,9 @@ export class HomeWrapperComponent implements OnInit {
     this.populateData();
   }
 
+  //Populate Initial Data
   populateData() {
     if (!localStorage.getItem('allData')) {
-      // enti.UpcomingCampaign.data.forEach((x) => {
-      //   x.createdOn = new Date(x.createdOn);
-      // });
       this.allData = enti.data;
       this.localStorageService.setItem('allData', this.allData);
     }
@@ -95,59 +93,6 @@ export class HomeWrapperComponent implements OnInit {
   }
 
   /**
-  * Add New Task
-  */
-  addNewTask(task) {
-    if (task.id) {
-      const taskIndex = this.allData.upcomingCampaignsArray.findIndex((x) => x.id == task.id);
-      this.allData.upcomingCampaignsArray[taskIndex] = task;
-    }
-    else {
-      task.id = this.generateUUID();
-      this.allData.upcomingCampaignsArray.push(task);
-    }
-    this.localStorageService.setItem('allData', this.allData);
-    this.hideModal();
-    this.localStorageService.getItem('allData');
-  }
-
-  /**
-   * Delete Task
-   */
-  deleteTask(index, key) {
-    this.allData[key].splice(index, 1);
-    this.localStorageService.setItem('allData', this.allData);
-    this.localStorageService.getItem('allData');
-  }
-
-  /**
-   * Move Task
-   */
-  moveTask(index, task, fromArrayName, toArrayName) {
-    this.allData[fromArrayName].splice(index, 1);
-    this.allData[toArrayName].push(task);
-    this.localStorageService.setItem('allData', this.allData);
-    this.localStorageService.getItem('allData');
-  }
-
-  /**
-   * Generate Unique ID
-   */
-  generateUUID() {
-    this.uuidValue = UUID.UUID();
-    return this.uuidValue;
-  }
-
-  /**
-   * Edit Task modal
-   * @param template 
-   */
-  editTask(task, template) {
-    this.bsModalRef = this.modalService.show(template, this.modalconfig);
-    this.selectedCampaign = task;
-  }
-
-  /**
    * Create Task modal
    * @param template 
    */
@@ -172,6 +117,10 @@ export class HomeWrapperComponent implements OnInit {
     this.bsModalRef.hide();
   }
 
+  
+  /**
+ * To Calculate difference between dates
+ */
   calculateDiff(sentOn) {
 
     let todayDate = new Date();
