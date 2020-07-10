@@ -37,12 +37,13 @@ export class CampaignRowComponent implements OnInit, OnChanges {
     let differenceInTime = todayDate.getTime() - sentOnDate.getTime();
     // To calculate the no. of days between two dates
     let differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
-    if (differenceInDays != 0) {
+    if (differenceInDays >= 0 && differenceInDays < 1) {
+      return 'Live';
+    }
+    else {
       var result = differenceInDays > 0 ? differenceInDays + ' Days Ago' : differenceInDays * -1 + ' Days Ahead';
       return result;
     }
-    else
-      return 'Live';
   }
 
   changeDate($event) {

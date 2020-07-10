@@ -1,53 +1,54 @@
 <tr class="campaign-row">
-<td>
-    <label for="" class="label-size">
-        {{campaign.createdOn | date :'MMM yyyy, dd'}}</label>
-    <div>
-        <label class="label-size">
-            {{calculateDiff(campaign.createdOn)}}</label>
-    </div>
-</td>
-<td style="position: relative;">
-    <img class="campaign-icon" [src]="(imgPath + campaign.image_url)" />
-    <ul class="campaign-info">
-        <li>
-            <label class="label-size" style="font-size: 16px;
+    <td>
+        <label for="" class="label-size">
+            {{campaign.createdOn | date :'MMM yyyy, dd'}}</label>
+        <div>
+            <label class="label-size">
+                {{calculateDiff(campaign.createdOn)}}</label>
+        </div>
+    </td>
+    <td style="position: relative;">
+        <img class="campaign-icon" [src]="(imgPath + campaign.image_url)" />
+        <ul class="campaign-info">
+            <li>
+                <label class="label-size" style="font-size: 16px;
     line-height: 24px;">{{campaign.name}}</label>
-        </li>
-        <li>
-            <label
-                class="label-size">{{campaign.region}}</label>
-        </li>
-    </ul>
-</td>
-<td>
-    <img class="icon-size"
-        (click)="openDialog($event)"
-        src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 4/Price.png">
-    <label class="label-size"> View Pricing</label>
-</td>
-<td>
-    <ul class="action-list">
-        <li>
-            <img class="icon-size"
-                src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 3/file.png">
-            <label class="label-size">CSV</label>
-        </li>
-        <li>
-            <img class="icon-size"
-                src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 2/statistics-report.png">
-            <label class="label-size">Report</label>
-        </li>
-        <li>
-            <bs-datepicker
-                (bsValueChange)="changeDate($event)"
-                [bsValue]="campaign.createdOn" #dp="bsDatepicker" bsDatepicker>
-            </bs-datepicker>
-            <img class="icon-size"
-                src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group/calendar.png"
-                (click)="dp.toggle()">
-            <label class="label-size">Schedule Again</label>
-        </li>
-    </ul>
-</td>
+            </li>
+            <li>
+                <label class="label-size">{{campaign.region}}</label>
+            </li>
+        </ul>
+    </td>
+    <td>
+        <img class="icon-size" (click)="openDialog($event)"
+            src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 4/Price.png">
+        <label class="label-size"> View Pricing</label>
+    </td>
+    <td>
+        <ul class="action-list">
+            <li>
+                <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv" target="_blank">
+                    <img class="icon-size"
+                        src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 3/file.png">
+                </a>
+                <label class="label-size">CSV</label>
+            </li>
+            <li>
+                <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank">
+                <img class="icon-size"
+                    src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 2/statistics-report.png">
+                <label class="label-size">Report</label>
+            </a>
+            </li>
+            <li>
+                <bs-datepicker (bsValueChange)="changeDate($event)" [bsValue]="campaign.createdOn" #dp="bsDatepicker"
+                    bsDatepicker>
+                </bs-datepicker>
+                <img class="icon-size"
+                    src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group/calendar.png"
+                    (click)="dp.toggle()">
+                <label class="label-size">Schedule Again</label>
+            </li>
+        </ul>
+    </td>
 </tr>
