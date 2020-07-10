@@ -1,9 +1,9 @@
 <tr class="campaign-row">
     <td>
-        <label for="" class="label-size">
+        <label for="" class="label-size" i18n>
             {{campaign.createdOn | date :'MMM yyyy, dd'}}</label>
         <div>
-            <label class="label-size">
+            <label class="label-size" i18n>
                 {{calculateDiff(campaign.createdOn)}}</label>
         </div>
     </td>
@@ -11,18 +11,18 @@
         <img class="campaign-icon" [src]="(imgPath + campaign.image_url)" />
         <ul class="campaign-info">
             <li>
-                <label class="label-size" style="font-size: 16px;
-    line-height: 24px;">{{campaign.name}}</label>
+                <label class="label-size" style="font-size: 16px; 
+    line-height: 24px;" i18n>{{campaign.name}}</label>
             </li>
             <li>
-                <label class="label-size">{{campaign.region}}</label>
+                <label class="label-size" i18n>{{campaign.region}}</label>
             </li>
         </ul>
     </td>
     <td>
         <img class="icon-size" (click)="openDialog($event)"
             src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 4/Price.png">
-        <label class="label-size"> View Pricing</label>
+        <label class="label-size" i18n> View Pricing</label>
     </td>
     <td>
         <ul class="action-list">
@@ -31,13 +31,13 @@
                     <img class="icon-size"
                         src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 3/file.png">
                 </a>
-                <label class="label-size">CSV</label>
+                <label class="label-size" i18n>CSV</label>
             </li>
             <li>
                 <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank">
                 <img class="icon-size"
                     src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 2/statistics-report.png">
-                <label class="label-size">Report</label>
+                <label class="label-size" i18n>Report</label>
             </a>
             </li>
             <li>
@@ -47,7 +47,7 @@
                 <img class="icon-size"
                     src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group/calendar.png"
                     (click)="dp.toggle()">
-                <label class="label-size">Schedule Again</label>
+                <label class="label-size" i18n>Schedule Again</label>
             </li>
         </ul>
     </td>
