@@ -1,0 +1,47 @@
+<form>
+    <div class="modal-body">
+        <div>
+            <img [src]="(imgPath + campaign.image_url)">
+            <ul class="campaign-info">
+                <li>
+                    <label class="label-size" style="font-size: 16px;
+            line-height: 19px;color: #2B416C; font-weight: 600;">{{campaign.name}}</label>
+                </li>
+                <li>
+                    <label class="label-size">{{campaign.region}}</label>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <label class="header">Pricing</label>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="" class="price-field"> 1-Week 1-Month</label>
+                </div>
+                <div class="col-sm-7">
+                    <label for="" class="price-field font-weight right-align"> $ 10000</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="" class="price-field"> 6 Months</label>
+                </div>
+                <div class="col-sm-7">
+                    <label for="" class="price-field font-weight right-align"> $ 10000</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="" class="price-field"> 1 Year</label>
+                </div>
+                <div class="col-sm-7">
+                    <label for="" class="price-field font-weight right-align"> $ 10000</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  (click)="hideModal()" class="close-button">
+        <img src="../../../../assets/Images/inspect/Front-End/Page 1/Dashboard-Popup/Download BlueStacks.png"
+           >
+    </div>
+</form>

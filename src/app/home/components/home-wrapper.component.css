@@ -1,0 +1,114 @@
+.container{
+width: 100%;
+height: 1149px;
+
+background: #FFFFFF;
+}
+
+.title{
+position: absolute;
+width: 1440px;
+height: 80px;
+left: 0px;
+top: 0px;
+
+background: #1F2640;
+}
+
+.logo{
+  position: absolute;
+  width: 147px;
+  height: 45px;
+  left: 182px;
+  top: 17px;
+}
+
+.heading
+{
+position: absolute;
+width: 430px;
+height: 50px;
+left: 182px;
+top: 120px;
+
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 50px;
+/* identical to box height, or 104% */
+
+
+color: #2B416C;
+}
+
+.project-tab{
+  position: absolute;
+    top: 210px;
+    left: 190px;
+    width: 1077px;
+}
+
+
+table{
+  background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead>tr{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+text-transform: uppercase;
+
+background: #F1F1F4;
+color: #556789;
+}
+
+nav a{
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+border: none;
+/* identical to box height, or 156% */
+
+
+color: #556789;
+}
+
+.base-line{
+width: 100%;
+height: 1px;
+margin-bottom: 30px;
+
+background: #F1F1F4;
+transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+nav{
+  width: 47%;;
+}
+
+.nav-tabs .nav-link.active{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+border-bottom: 4px solid #83A515;
+/* identical to box height, or 156% */
+
+
+color: #83A515;
+}
+
+.campaign-details{
+  position: absolute;
+  display: contents;
+}
+
