@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder} from '@angular/forms';
+import { Urls } from '../../../../environments/environment';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
@@ -10,21 +11,13 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class CampaignDetailComponent implements OnInit {
 
   campaignPriceForm: FormGroup;
-  imgPath: string = '../../../../';
+  imgPath: string = Urls.wrapperChild_img_path;
 
   @Input() campaign: any;
   @Output() hideModalEvent: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private formBuilder: FormBuilder,
     private service: LocalStorageService) {
-    // this.campaignPriceForm = this.formBuilder.group({
-    //   id: [''],
-    //   title: ['', Validators.required],
-    //   name: ['', Validators.required],
-    //   priority: ['', Validators.required],
-    //   description: ['', Validators.required],
-    //   date: [new Date(), Validators.required],
-    // })
   }
 
   ngOnInit(): void {

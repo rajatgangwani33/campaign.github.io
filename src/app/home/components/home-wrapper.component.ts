@@ -1,10 +1,10 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from "ngx-bootstrap/modal";
 import * as _ from 'lodash';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { UUID } from 'angular2-uuid';
 import { HttpClient } from "@angular/common/http";
 import enti from '../../en.json';
+import { Urls } from '../../../environments/environment';
 
 
 @Component({
@@ -23,7 +23,7 @@ export class HomeWrapperComponent implements OnInit {
   bsModalRef: BsModalRef;
   uuidValue: string;
 
-  imgPath: string = '../../../';
+  imgPath: string = Urls.wrapper_img_path;
 
   todayDate = new Date();
 

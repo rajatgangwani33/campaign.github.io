@@ -21,32 +21,28 @@
     </td>
     <td>
         <img class="icon-size" (click)="openDialog($event)"
-            src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 4/Price.png">
+            [src]="(imgPath + 'Dashboard/Row Copy 2-Row/Group 4/Price.png')">
         <label class="label-size" i18n> View Pricing</label>
     </td>
     <td>
         <ul class="action-list">
             <li>
                 <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv" target="_blank">
-                    <img class="icon-size"
-                        src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 3/file.png">
+                    <img class="icon-size" [src]="(imgPath + 'Dashboard/Row Copy 2-Row/Group 3/file.png')">
                 </a>
                 <label class="label-size" i18n>CSV</label>
             </li>
             <li>
                 <a href="http://www.africau.edu/images/default/sample.pdf" target="_blank">
-                <img class="icon-size"
-                    src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group 2/statistics-report.png">
-                <label class="label-size" i18n>Report</label>
-            </a>
+                    <img class="icon-size" [src]="(imgPath + 'Dashboard/Row Copy 2-Row/Group 2/statistics-report.png')">
+                    <label class="label-size" i18n>Report</label>
+                </a>
             </li>
             <li>
                 <bs-datepicker (bsValueChange)="changeDate($event)" [bsValue]="campaign.createdOn" #dp="bsDatepicker"
                     bsDatepicker>
                 </bs-datepicker>
-                <img class="icon-size"
-                    src="../../../assets/Images/inspect/Front-End/Page 1/Dashboard/Row Copy 2-Row/Group/calendar.png"
-                    (click)="dp.toggle()">
+                <img class="icon-size" [src]="(imgPath + 'Dashboard/Row Copy 2-Row/Group/calendar.png')" (click)="dp.toggle()">
                 <label class="label-size" i18n>Schedule Again</label>
             </li>
         </ul>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Urls } from '../../../../environments/environment';
 
 @Component({
   selector: 'campaign-row',
@@ -12,7 +13,7 @@ export class CampaignRowComponent implements OnInit, OnChanges {
   @Output() openDialogEvent: EventEmitter<any> = new EventEmitter<any>();
   @Output() changeDateEvent: EventEmitter<any> = new EventEmitter<any>();
 
-  imgPath: string = '../../../../';
+  imgPath: string = Urls.wrapperChild_img_path;
 
   constructor() { }
 

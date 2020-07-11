@@ -14,3 +14,7 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+export const Urls = {
+  wrapper_img_path: '../../../assets/Images/inspect/Front-End/Page 1/',
+  wrapperChild_img_path: '../../../../assets/Images/inspect/Front-End/Page 1/',
+};
